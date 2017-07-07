@@ -1,0 +1,43 @@
+category_id : 68905630
+category_path : Array(3)
+category_path_ids : Array(3)
+creation_tsz : 1399763583
+currency_code : "USD"
+description : "Super cute vintage set of 3 Siesta Ware white mugs featuring a blue anchor surrounded by stars on each side of glass. Each glass mug has the Siesta signature wood handle secured with brass braces around the glass.
+Measures 5&quot; high by about 3&quot; diameter at bottom tapered to 2.25&quot; diameter opening at mouth.
+In good vintage condition with some visible signs of use and age on brass. (see photos).
+My shipping fees are an estimate. If you are located west of the Mississippi, your costs will generally be lower than the shipping fee listed. After package has been mailed, any shipping overages of $1.00 or more will be refunded."
+ending_tsz : 1410390783
+featured_rank : null
+file_data : ""
+has_variations : false
+is_customizable : false
+is_digital : false
+is_private : false
+is_supply : "false"
+language : "en-US"
+last_modified_tsz : 1399763583
+listing_id : 161489961
+materials : Array(3)
+non_taxable : false
+num_favorers : 4
+occasion : null
+original_creation_tsz : 1378160642
+price : 12
+processing_max : 3
+processing_min : 1
+quantity : 1
+recipient : null
+shipping_template_id : null
+shop_section_id : 15467146
+state : "active"
+state_tsz : 1399311031
+style : Array(2)
+tags : Array(13)
+title : "SALE Mid Century Siesta Ware White Mug with Anchor - Set of 3"
+url : "https://www.etsy.com/listing/161489961/sale-mid-century-siesta-ware-white-mug?utm_source=etsybrowser&utm_medium=api&utm_campaign=api"
+used_manufacturer : false
+user_id : 7492310
+views : 62
+when_made : "1970s"
+who_made : "someone_else"
