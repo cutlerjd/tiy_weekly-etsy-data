@@ -52,7 +52,7 @@ function question4 () {
   for(i=0;i<data.length;i++) {
     for(j=0;j<data[i].materials.length;j++){
       if(data[i].materials[j]=="wood"){
-        listProducts.push({name:data[i].name, materials:data[i].materials});
+        listProducts.push({name:data[i].title, materials:data[i].materials});
       }
     }
   }
@@ -68,7 +68,7 @@ function question5 () {
   for(i=0;i<data.length;i++) {
       if(data[i].materials.length>=8){
         data[i].materials_number = data[i].materials.length;
-        listProducts.push({name:data[i].name, materials_number:data[i].materials_number, materials:data[i].materials});
+        listProducts.push({name:data[i].title, materials_number:data[i].materials_number, materials:data[i].materials});
     }
   }
   return listProducts;
@@ -79,5 +79,16 @@ function question5 () {
 // Answer:
 function question6 () {
   // Answer:
-
+  let sellers = [{user:"",items:0}];
+  for(i=0;i<data.length;i++){
+    for(j=0;j<sellers.length;j++){
+      if(sellers[j].user_id!==data[i].user_id){
+        sellers.push({user_id:data[i].user_id,items:1})
+      } else if(sellers[j].user_id==data[i].user_id){
+        sellers[j].items +=1;
+      }
+    }
+  }
+  return sellers
 }
+console.log(question6(data))
