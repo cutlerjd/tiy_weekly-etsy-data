@@ -79,16 +79,17 @@ function question5 () {
 // Answer:
 function question6 () {
   // Answer:
-  let sellers = [{user:"",items:0}];
-  for(i=0;i<data.length;i++){
-    for(j=0;j<sellers.length;j++){
-      if(sellers[j].user_id!==data[i].user_id){
-        sellers.push({user_id:data[i].user_id,items:1})
-      } else if(sellers[j].user_id==data[i].user_id){
-        sellers[j].items +=1;
+  let products = []
+  let unique_product = [];
+  for(i=0;i<data.length;i++) {
+    products.push(data[i].title)
+  }
+  for(i=0;i<products.length;i++) {
+    for(j=1;j<=i;j++){
+      if(products[i]==products[j]){
+        products.splice(j,1)
       }
     }
   }
-  return sellers
+  console.log(products)
 }
-console.log(question6(data))
