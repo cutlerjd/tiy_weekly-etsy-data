@@ -79,17 +79,13 @@ function question5 () {
 // Answer:
 function question6 () {
   // Answer:
-  let products = []
-  let unique_product = [];
+  let counts = {}
   for(i=0;i<data.length;i++) {
-    products.push(data[i].title)
+    if(counts[data[i].who_made]){
+    counts[data[i].who_made]+=1
+  } else {
+    counts[data[i].who_made]=1
   }
-  for(i=0;i<products.length;i++) {
-    for(j=1;j<=i;j++){
-      if(products[i]==products[j]){
-        products.splice(j,1)
-      }
-    }
   }
-  console.log(products)
+console.log(counts)
 }
