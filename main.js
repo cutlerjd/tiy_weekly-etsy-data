@@ -10,10 +10,11 @@ console.log(data);
 function question1 () {
   // Answer:
   let average = 0;
-  for(i=0;i<data.length;i++) {
+  for(let i=0;i<data.length;i++) {
     average += data[i].price
   }
-  return average / data.length
+  average = average / data.length
+  console.log("The average price is $" + average.toFixed(2))
 }
 
 
@@ -22,12 +23,14 @@ function question1 () {
 function question2 () {
   // Answer:
   let listProducts = [];
-  for(i=0;i<data.length;i++) {
+  for(let i=0;i<data.length;i++) {
     if (data[i].price < 18 && data[i].price > 14) {
       listProducts.push(data[i]);
     }
   }
-  return listProducts;
+ listProducts.forEach(function(element){
+   console.log(element.title);
+ });
 }
 
 
@@ -36,12 +39,14 @@ function question2 () {
 function question3 () {
   // Answer:
   let listProducts = [];
-  for(i=0;i<data.length;i++) {
+  for(let i=0;i<data.length;i++) {
     if(data[i].currency_code == "GBP") {
-      listProducts.push({name:data[i].name, price:data[i].price, currency_code:data[i].currency_code})
+      listProducts.push({name:data[i].title, price:data[i].price, currency_code:data[i].currency_code})
     }
   }
-  return listProducts;
+  listProducts.forEach(function(element){
+    console.log(element.name);
+  });
 }
 
 
@@ -49,14 +54,16 @@ function question3 () {
 function question4 () {
   // Answer:
   let listProducts = [];
-  for(i=0;i<data.length;i++) {
-    for(j=0;j<data[i].materials.length;j++){
+  for(let i=0;i<data.length;i++) {
+    for(let j=0;j<data[i].materials.length;j++){
       if(data[i].materials[j]=="wood"){
         listProducts.push({name:data[i].title, materials:data[i].materials});
       }
     }
   }
-  return listProducts;
+  listProducts.forEach(function(element){
+    console.log(element.name);
+  });
 }
 
 
@@ -65,13 +72,18 @@ function question4 () {
 function question5 () {
   // Answer:
   let listProducts = [];
-  for(i=0;i<data.length;i++) {
+  for(let i=0;i<data.length;i++) {
       if(data[i].materials.length>=8){
         data[i].materials_number = data[i].materials.length;
         listProducts.push({name:data[i].title, materials_number:data[i].materials_number, materials:data[i].materials});
     }
   }
-  return listProducts;
+  listProducts.forEach(function(element){
+    console.log(element.name);
+    for(let i =0;i < element.materials.length; i++){
+      console.log("- " + element.materials[i])
+    }
+  });
 }
 
 
@@ -80,12 +92,12 @@ function question5 () {
 function question6 () {
   // Answer:
   let counts = {}
-  for(i=0;i<data.length;i++) {
+  for(let i=0;i<data.length;i++) {
     if(counts[data[i].who_made]){
     counts[data[i].who_made]+=1
   } else {
     counts[data[i].who_made]=1
   }
   }
-console.log(counts)
+console.log(counts.who_made + " items were made by their sellers.")
 }
