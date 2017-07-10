@@ -99,5 +99,5 @@ function question6 () {
     counts[data[i].who_made]=1
   }
   }
-console.log(counts.who_made + " items were made by their sellers.")
+console.log(counts.i_did + " items were made by their sellers.")
 }
